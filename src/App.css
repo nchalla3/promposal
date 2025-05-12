@@ -1,38 +1,63 @@
-.App {
+@font-face {
+  font-family: "Heyam";
+  src: local("Heyam"),
+  url("./fonts/Heyam.ttf") format("truetype");
+}
+
+
+.app-container {
   text-align: center;
+  position: relative;
+  height: 100vh;
+  background-color: #fdf6f0;
+  overflow: hidden;
+  font-family: 'Heyam', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.speech {
+  margin-top: 40px;
+  font-size: 2rem;
+  background: #fff;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 30px;
+  border: 3px solid #333;
+  letter-spacing: 3px;
+  font-size: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bluey {
+  width: 250px;
+  margin: 30px auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.yes-button,
+.no-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  margin: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.yes-button {
+  background-color: #00c853;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.no-button {
+  background-color: #d50000;
+  color: white;
+  position: absolute;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.celebration {
+  padding-top: 50px;
+}
+
+.celebration h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
