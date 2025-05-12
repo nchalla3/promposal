@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/promposal/static/css/main.1c741276.css",
+    "main.js": "/promposal/static/js/main.b2901f06.js",
+    "static/js/453.9d0d0eef.chunk.js": "/promposal/static/js/453.9d0d0eef.chunk.js",
+    "static/media/Heyam.ttf": "/promposal/static/media/Heyam.4ae2324d0a100a9c91fc.ttf",
+    "index.html": "/promposal/index.html",
+    "main.1c741276.css.map": "/promposal/static/css/main.1c741276.css.map",
+    "main.b2901f06.js.map": "/promposal/static/js/main.b2901f06.js.map",
+    "453.9d0d0eef.chunk.js.map": "/promposal/static/js/453.9d0d0eef.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c741276.css",
+    "static/js/main.b2901f06.js"
+  ]
+}
