@@ -18,13 +18,13 @@
   /* Speech bubble styles */
   background: #d2ebff;
   display: inline-block;
-  padding: 11px;
+  padding: 1%;
   border-radius: 30px;
   border: 3px solid #333;
 
   /* letter styling*/
   letter-spacing: 3px;
-  font-size: 75px;
+  font-size: 5.5vw;
   -webkit-text-stroke: 0.5px black;
   color: #88cafc;
 
@@ -41,9 +41,9 @@
   position: absolute; 
   top: 70%;
   right: 10%; 
-  transform: translateY(-50%); 
+  transform: translate(0%,-50%); 
   clip-path: inset(0% 20% 0% 20%);
-  width: 400px; 
+  width: 31vw; 
   height: auto; 
 }
 
@@ -75,6 +75,15 @@
   height: auto; 
 }
 
+.naveen1{
+  position: absolute; 
+  top: 75%;
+  left: 42%; 
+  transform: translate(-25%, -64%); 
+  width: 25vw; 
+  height: auto; 
+}
+
 .yes-button,
 .no-button {
   padding: 1vw 2vw;
@@ -94,8 +103,8 @@
   background-color: #00c853;
   position: absolute;
   color: white;
-  top: 45%; /* Adjust this value to position below the speech bubble */
-  left: 40%; /* Adjust to position the button horizontally */
+  top: 42%; 
+  left: 37.5%; 
   transform: translateX(-50%);
 }
 
@@ -111,12 +120,12 @@
 
 .celebration h1 {
   letter-spacing: 3px;
-  font-size: 5vw;
+  font-size: 6vw;
   color: #404066;
 
   position: absolute;
-  top: 0%; /* Adjust this value to control the distance from the top */
-  left: 50%;
+  top: -5%;
+  left: 41%;
   transform: translateX(-55%);
   white-space: normal;
   text-align: center;
@@ -135,4 +144,47 @@
   margin: 2vh auto; 
   display: block; 
   transform: translate(150%, -10%); 
+}
+
+.naveen2{
+  position: absolute; 
+  top: 72%;
+  left: 42%; 
+  transform: translate(-25%, -64%); 
+  width: 30vw; 
+  height: auto; 
+}
+.naveen3{
+  position: absolute; 
+  top: 80%;
+  left: 80%; 
+  transform: translate(-25%, -64%); 
+  width: 20vw; 
+  height: auto; 
+}
+.naveen4{
+  position: absolute; 
+  top: 79%;
+  left: 5%; 
+  transform: translate(-25%, -64%); 
+  width: 20vw; 
+  height: auto; 
+}
+
+.naveen5{
+  position: absolute; 
+  top: 64%;
+  left: 28%; 
+  transform: translate(-25%, -64%); 
+  width: 25vw; 
+  height: auto; 
+}
+
+.naveen6{
+  position: absolute; 
+  top: 69%;
+  left: 60%; 
+  transform: translate(-25%, -64%); 
+  width: 30vw; 
+  height: auto; 
 }
