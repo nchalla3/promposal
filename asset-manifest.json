@@ -1,21 +1,27 @@
 {
   "files": {
-    "main.css": "/promposal/static/css/main.230ab779.css",
-    "main.js": "/promposal/static/js/main.c559479b.js",
+    "main.css": "/promposal/static/css/main.48442da5.css",
+    "main.js": "/promposal/static/js/main.01a7d9a9.js",
     "static/js/453.9d0d0eef.chunk.js": "/promposal/static/js/453.9d0d0eef.chunk.js",
     "static/media/blueyhappy.gif": "/promposal/static/media/blueyhappy.7063f2ca8373c8f01a13.gif",
+    "static/media/naveen5.png": "/promposal/static/media/naveen5.eba451c5d3c762b16ba5.png",
+    "static/media/naveen4.png": "/promposal/static/media/naveen4.66cc2185c69f6adee6df.png",
     "static/media/chili.png": "/promposal/static/media/chili.2aa6ded9e282b65fbea4.png",
     "static/media/Heyam.ttf": "/promposal/static/media/Heyam.4ae2324d0a100a9c91fc.ttf",
+    "static/media/naveen3.png": "/promposal/static/media/naveen3.5c29b0e74bfb7f3238f9.png",
     "static/media/bingo.png": "/promposal/static/media/bingo.fa6fbb829974726cdc1d.png",
     "static/media/bluey.png": "/promposal/static/media/bluey.26e7d3e184153e377cee.png",
+    "static/media/naveen6.png": "/promposal/static/media/naveen6.605a0bdeb3eb3d9b3dba.png",
+    "static/media/naveen2.png": "/promposal/static/media/naveen2.4942590dbd0cb110f986.png",
     "static/media/bandit.png": "/promposal/static/media/bandit.8f32f493bf1fcdeaaf39.png",
+    "static/media/naveen1.png": "/promposal/static/media/naveen1.7aed3191bd51ec52327f.png",
     "index.html": "/promposal/index.html",
-    "main.230ab779.css.map": "/promposal/static/css/main.230ab779.css.map",
-    "main.c559479b.js.map": "/promposal/static/js/main.c559479b.js.map",
+    "main.48442da5.css.map": "/promposal/static/css/main.48442da5.css.map",
+    "main.01a7d9a9.js.map": "/promposal/static/js/main.01a7d9a9.js.map",
     "453.9d0d0eef.chunk.js.map": "/promposal/static/js/453.9d0d0eef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.230ab779.css",
-    "static/js/main.c559479b.js"
+    "static/css/main.48442da5.css",
+    "static/js/main.01a7d9a9.js"
   ]
 }
