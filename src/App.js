@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import bluey from './bluey.png';
+
 
 function App() {
   const [saidYes, setSaidYes] = useState(false);
@@ -17,7 +19,7 @@ function App() {
         <>
           <h1 className="speech">Will you go to prom with me?</h1>
           <img
-            src="https://upload.wikimedia.org/wikipedia/en/6/69/Bluey_%28Disney%2B%29.png"
+            src={bluey}
             alt="Bluey"
             className="bluey"
           />

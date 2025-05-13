@@ -9,26 +9,44 @@
   text-align: center;
   position: relative;
   height: 100vh;
-  background-color: #fdf6f0;
+  background-color: #a4a4ff;
   overflow: hidden;
   font-family: 'Heyam', cursive;
 }
 
 .speech {
-  margin-top: 40px;
-  font-size: 2rem;
-  background: #fff;
+  /* Speech bubble styles */
+  background: #d2ebff;
   display: inline-block;
-  padding: 20px;
+  padding: 11px;
   border-radius: 30px;
   border: 3px solid #333;
+
+  /* letter styling*/
   letter-spacing: 3px;
-  font-size: 50px;
+  font-size: 75px;
+  -webkit-text-stroke: 0.5px black;
+  color: #88cafc;
+
+  /* bubble positioning */
+  /*width: 80%;
+  max-width: 650px;*/
+  position: absolute;
+  top: 0px; /* Adjust this value to control the distance from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: normal;
+  text-align: center;
 }
 
 .bluey {
-  width: 250px;
-  margin: 30px auto;
+  position: absolute; /* Allows precise positioning */
+  top: 70%; /* Moves it to the vertical center */
+  right: 100px; /* Positions it near the right edge */
+  transform: translateY(-50%); /* Centers it vertically */
+  clip-path: inset(0% 20% 0% 20%);
+  width: 400px; /* Increased width to make it bigger */
+  height: auto; /* Ensures the aspect ratio is maintained */
 }
 
 .yes-button,
@@ -40,17 +58,23 @@
   cursor: pointer;
   margin: 10px;
   transition: all 0.2s ease-in-out;
+  position: absolute; /* Ensures precise positioning */
 }
 
 .yes-button {
   background-color: #00c853;
   color: white;
+  top: 275px; /* Adjust this value to position below the speech bubble */
+  left: 40%; /* Adjust to position the button horizontally */
+  transform: translateX(-50%);
 }
 
 .no-button {
   background-color: #d50000;
   color: white;
-  position: absolute;
+  top: 275px; /* Same vertical alignment as the Yes button */
+  left: 55%; /* Position it to the right of the Yes button */
+  transform: translateX(-50%);
 }
 
 .celebration {
