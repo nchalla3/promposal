@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import bluey from './images/bluey.png';
 import blueyhappy from './images/blueyhappy.gif';
+import bandit from './images/bandit.png';
+import chili from './images/chili.png';
 
 function App() {
   const [saidYes, setSaidYes] = useState(false);
@@ -23,6 +25,21 @@ function App() {
             alt="Bluey"
             className="bluey"
           />
+
+          <img
+            src={bandit}
+            alt="Bandit"
+            className="bandit"
+          />
+
+          <img
+            src={chili}
+            alt="Chili"
+            className="chili"
+          />
+
+
+          
           <button className="yes-button" onClick={() => setSaidYes(true)}>
             Yes ❤️🫶
           </button>
@@ -40,7 +57,7 @@ function App() {
         </>
       ) : (
         <div className="celebration">
-          <h1>YAY! 🎉 Can't wait for prom! 💃🕺</h1>
+          <h1>YIPPEE! Can't wait for prom! 💃🕺</h1>
           <img
             src={blueyhappy}
             alt="Happy Bluey"
