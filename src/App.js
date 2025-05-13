@@ -4,10 +4,11 @@ import bluey from './images/bluey.png';
 import blueyhappy from './images/blueyhappy.gif';
 import bandit from './images/bandit.png';
 import chili from './images/chili.png';
+import bingo from './images/bingo.png';
 
 function App() {
   const [saidYes, setSaidYes] = useState(false);
-  const [noPosition, setNoPosition] = useState({ top: '47%', left: '53%' });
+  const [noPosition, setNoPosition] = useState({ top: '45%', left: '52%' });
 
   const moveNoButton = () => {
     const top = `${Math.random() * 80}%`;
@@ -36,6 +37,12 @@ function App() {
             src={chili}
             alt="Chili"
             className="chili"
+          />
+
+          <img
+            src={bingo}
+            alt="Bingo"
+            className="bingo"
           />
 
 
