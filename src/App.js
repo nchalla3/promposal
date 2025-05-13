@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './App.css';
-import bluey from './bluey.png';
-
+import bluey from './images/bluey.png';
+import blueyhappy from './images/blueyhappy.gif';
 
 function App() {
   const [saidYes, setSaidYes] = useState(false);
-  const [noPosition, setNoPosition] = useState({ top: '70%', left: '40%' });
+  const [noPosition, setNoPosition] = useState({ top: '47%', left: '53%' });
 
   const moveNoButton = () => {
     const top = `${Math.random() * 80}%`;
@@ -14,7 +14,7 @@ function App() {
   };
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${saidYes ? 'celebrate-bg' : ''}`}>
       {!saidYes ? (
         <>
           <h1 className="speech">Will you go to prom with me?</h1>
@@ -24,7 +24,7 @@ function App() {
             className="bluey"
           />
           <button className="yes-button" onClick={() => setSaidYes(true)}>
-            Yes 💖
+            Yes ❤️🫶
           </button>
           <button
             className="no-button"
@@ -35,16 +35,16 @@ function App() {
               left: noPosition.left,
             }}
           >
-            No 🙈
+            No 🥀💔
           </button>
         </>
       ) : (
         <div className="celebration">
           <h1>YAY! 🎉 Can't wait for prom! 💃🕺</h1>
           <img
-            src="https://media.giphy.com/media/Ih2vFzWnRlt4TqICa9/giphy.gif"
+            src={blueyhappy}
             alt="Happy Bluey"
-            className="bluey"
+            className="bluey-happy"
           />
         </div>
       )}
