@@ -1,13 +1,18 @@
 {
   "files": {
-    "main.css": "/promposal/static/css/main.48442da5.css",
-    "main.js": "/promposal/static/js/main.01a7d9a9.js",
+    "main.css": "/promposal/static/css/main.90cf78fb.css",
+    "main.js": "/promposal/static/js/main.d84d12ca.js",
     "static/js/453.9d0d0eef.chunk.js": "/promposal/static/js/453.9d0d0eef.chunk.js",
     "static/media/blueyhappy.gif": "/promposal/static/media/blueyhappy.7063f2ca8373c8f01a13.gif",
+    "static/media/dog3.jpg": "/promposal/static/media/dog3.bfb96ad08839d3957be0.jpg",
+    "static/media/dog2.jpg": "/promposal/static/media/dog2.8307b534cba3e4299f60.jpg",
+    "static/media/dog1.jpg": "/promposal/static/media/dog1.93f2ec6ed12378f92d4a.jpg",
+    "static/media/dog4.jpg": "/promposal/static/media/dog4.db3b93d0495cd5291fdf.jpg",
     "static/media/naveen5.png": "/promposal/static/media/naveen5.eba451c5d3c762b16ba5.png",
     "static/media/naveen4.png": "/promposal/static/media/naveen4.66cc2185c69f6adee6df.png",
     "static/media/chili.png": "/promposal/static/media/chili.2aa6ded9e282b65fbea4.png",
     "static/media/Heyam.ttf": "/promposal/static/media/Heyam.4ae2324d0a100a9c91fc.ttf",
+    "static/media/hbdmessage.m4a": "/promposal/static/media/hbdmessage.b104edf1bbbf82828b33.m4a",
     "static/media/naveen3.png": "/promposal/static/media/naveen3.5c29b0e74bfb7f3238f9.png",
     "static/media/bingo.png": "/promposal/static/media/bingo.fa6fbb829974726cdc1d.png",
     "static/media/bluey.png": "/promposal/static/media/bluey.26e7d3e184153e377cee.png",
@@ -16,12 +21,12 @@
     "static/media/bandit.png": "/promposal/static/media/bandit.8f32f493bf1fcdeaaf39.png",
     "static/media/naveen1.png": "/promposal/static/media/naveen1.7aed3191bd51ec52327f.png",
     "index.html": "/promposal/index.html",
-    "main.48442da5.css.map": "/promposal/static/css/main.48442da5.css.map",
-    "main.01a7d9a9.js.map": "/promposal/static/js/main.01a7d9a9.js.map",
+    "main.90cf78fb.css.map": "/promposal/static/css/main.90cf78fb.css.map",
+    "main.d84d12ca.js.map": "/promposal/static/js/main.d84d12ca.js.map",
     "453.9d0d0eef.chunk.js.map": "/promposal/static/js/453.9d0d0eef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48442da5.css",
-    "static/js/main.01a7d9a9.js"
+    "static/css/main.90cf78fb.css",
+    "static/js/main.d84d12ca.js"
   ]
 }
