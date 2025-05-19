@@ -16,7 +16,6 @@ import dog1 from './images/dog1.jpg';
 import dog2 from './images/dog2.jpg';
 import dog3 from './images/dog3.jpg';
 import hbdmessage from './audio/hbdmessage.m4a';
-import dog4 from './images/dog4.jpg';
 
 function App() {
   const audioRef = useRef(null);
