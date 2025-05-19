@@ -220,3 +220,27 @@
   width: 30vw; 
   height: auto; 
 }
+
+.dog1{
+  position: absolute; 
+  top: 120%;
+  left: -25%; 
+  width: 20vw; 
+  height: auto; 
+}
+
+.dog2{
+  position: absolute; 
+  top: 120%;
+  left: 30%; 
+  width: 20vw; 
+  height: auto; 
+}
+
+.dog3{
+  position: absolute; 
+  top: 120%;
+  left: 85%; 
+  width: 20vw; 
+  height: auto; 
+}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Confetti from 'react-confetti'; // Import the Confetti component
 import './App.css';
 import bluey from './images/bluey.png';
@@ -12,8 +12,15 @@ import naveen3 from './images/naveen3.png';
 import naveen4 from './images/naveen4.png';
 import naveen5 from './images/naveen5.png';
 import naveen6 from './images/naveen6.png';
+import dog1 from './images/dog1.jpg';
+import dog2 from './images/dog2.jpg';
+import dog3 from './images/dog3.jpg';
+import hbdmessage from './audio/hbdmessage.m4a';
+import dog4 from './images/dog4.jpg';
 
 function App() {
+  const audioRef = useRef(null);
+
   const [saidYes, setSaidYes] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
   const [showBirthday, setShowBirthday] = useState(false);
@@ -30,15 +37,23 @@ function App() {
     setShowConfetti(true);
     setTimeout(() => {
       setShowConfetti(false);
-    }, 10000);
+    }, 5000);
   };
 
   const handleBirthdayClick = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
     setShowBirthday(true);
+    setShowConfetti(true);
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 5000);
   };
 
   return (
     <div className={`app-container ${saidYes ? 'celebrate-bg' : ''}`}>
+      <audio ref={audioRef} src={hbdmessage} />
       {showConfetti && <Confetti />}
       {!saidYes ? (
         <>
@@ -121,16 +136,6 @@ function App() {
           <button
             className="birthday-button"
             onClick={handleBirthdayClick}
-            /*style={{
-              display: 'block',
-              margin: '20px auto',
-              padding: '10px 20px',
-              fontSize: '1.5vw',
-              background: '#ffb347',
-              border: '2px solid #404066',
-              borderRadius: '10px',
-              cursor: 'pointer'
-            }}*/
           >
           If you're the most perfect girl<br />in the world, click here! 🎂
           </button>
@@ -144,6 +149,26 @@ function App() {
       ) : (
         <div className="hbday-heading">
             HAPPY BIRTHDAY ELLA 🎉🎂🫶🥰
+
+          <img
+            src={dog1}
+            alt="dog1"
+            className="dog1"
+          />
+
+          <img
+            src={dog2}
+            alt="dog2"
+            className="dog2"
+          />
+
+          <img
+            src={dog3}
+            alt="dog3"
+            className="dog3"
+          />
+          
+        
         </div>
       )}
     </div>
