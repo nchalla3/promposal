@@ -1,28 +1,15 @@
-import React, { useState, useEffect, useRef } from 'react';
-import Confetti from 'react-confetti'; // Import the Confetti component
+import React, { useState, useRef } from 'react';
+import Confetti from 'react-confetti';
 import './App.css';
-import bluey from './images/bluey.png';
-import blueyhappy from './images/blueyhappy.gif';
-import bandit from './images/bandit.png';
-import chili from './images/chili.png';
-import bingo from './images/bingo.png';
-import naveen1 from './images/naveen1.png';
-import naveen2 from './images/naveen2.png';
-import naveen3 from './images/naveen3.png';
-import naveen4 from './images/naveen4.png';
-import naveen5 from './images/naveen5.png';
-import naveen6 from './images/naveen6.png';
-import dog1 from './images/dog1.jpg';
-import dog2 from './images/dog2.jpg';
-import dog3 from './images/dog3.jpg';
+import PromPosal from './components/PromPosal';
+import Celebration from './components/Celebration';
+import Birthday from './components/Birthday';
 import hbdmessage from './audio/hbdmessage.m4a';
 
 function App() {
   const audioRef = useRef(null);
-
-  const [saidYes, setSaidYes] = useState(false);
+  const [currentPage, setCurrentPage] = useState('promposal');
   const [showConfetti, setShowConfetti] = useState(false);
-  const [showBirthday, setShowBirthday] = useState(false);
   const [noPosition, setNoPosition] = useState({ top: '42%', left: '53%' });
 
   const moveNoButton = () => {
@@ -32,144 +19,49 @@ function App() {
   };
 
   const handleYesClick = () => {
-    setSaidYes(true);
-    setShowConfetti(true);
-    setTimeout(() => {
-      setShowConfetti(false);
-    }, 5000);
+    setCurrentPage('celebration');
+    triggerConfetti();
   };
 
   const handleBirthdayClick = () => {
     if (audioRef.current) {
       audioRef.current.play();
     }
-    setShowBirthday(true);
+    setCurrentPage('birthday');
+    triggerConfetti();
+  };
+
+  const triggerConfetti = () => {
     setShowConfetti(true);
     setTimeout(() => {
       setShowConfetti(false);
     }, 5000);
   };
 
+  const renderCurrentPage = () => {
+    switch (currentPage) {
+      case 'promposal':
+        return (
+          <PromPosal
+            onYesClick={handleYesClick}
+            noPosition={noPosition}
+            onNoClick={moveNoButton}
+          />
+        );
+      case 'celebration':
+        return <Celebration onBirthdayClick={handleBirthdayClick} />;
+      case 'birthday':
+        return <Birthday />;
+      default:
+        return <PromPosal />;
+    }
+  };
+
   return (
-    <div className={`app-container ${saidYes ? 'celebrate-bg' : ''}`}>
+    <div className={`app-container ${currentPage !== 'promposal' ? 'celebrate-bg' : ''}`}>
       <audio ref={audioRef} src={hbdmessage} />
       {showConfetti && <Confetti />}
-      {!saidYes ? (
-        <>
-          <h1 className="speech">Will you go to prom with me?</h1>
-          <img
-            src={bluey}
-            alt="Bluey"
-            className="bluey"
-          />
-
-          <img
-            src={bandit}
-            alt="Bandit"
-            className="bandit"
-          />
-
-          <img
-            src={chili}
-            alt="Chili"
-            className="chili"
-          />
-
-          <img
-            src={bingo}
-            alt="Bingo"
-            className="bingo"
-          />
-          <img
-            src={naveen1}
-            alt="Naveen1"
-            className="naveen1"
-          />
-          <button className="yes-button" onClick={handleYesClick}>
-            Yes ❤️🫶
-          </button>
-          <button
-            className="no-button"
-            onClick={moveNoButton}
-            style={{
-              position: 'absolute',
-              top: noPosition.top,
-              left: noPosition.left,
-            }}
-          >
-            No 🥀💔
-          </button>
-        </>
-      ) : !showBirthday ? (
-        <div className="celebration">
-          <h1>YIPPEE! Can't wait for prom! 💃🕺</h1>
-          <img
-            src={blueyhappy}
-            alt="Happy Bluey"
-            className="bluey-happy"
-          />
-
-          <img
-            src={naveen2}
-            alt="Naveen2"
-            className="naveen2"
-          />
-          <img
-            src={naveen3}
-            alt="Naveen3"
-            className="naveen3"
-          />
-          <img
-            src={naveen4}
-            alt="Naveen4"
-            className="naveen4"
-          />
-
-          <img
-            src={naveen5}
-            alt="Naveen5"
-            className="naveen5"
-          />
-          
-          {/* New Birthday Button */}
-          <button
-            className="birthday-button"
-            onClick={handleBirthdayClick}
-          >
-          If you're the most perfect girl<br />in the world, click here! 🎂
-          </button>
-          
-          <img
-            src={naveen6}
-            alt="Naveen6"
-            className="naveen6"
-          />
-        </div>
-      ) : (
-        <div className="hbday-heading">
-            HAPPY BIRTHDAY ELLA 🎉🎂🫶🥰
-
-          <img
-            src={dog1}
-            alt="dog1"
-            className="dog1"
-          />
-
-          <img
-            src={dog2}
-            alt="dog2"
-            className="dog2"
-          />
-
-          <img
-            src={dog3}
-            alt="dog3"
-            className="dog3"
-          />
-          
-        
-        </div>
-      )}
+      {renderCurrentPage()}
     </div>
   );
 }
