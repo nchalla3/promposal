@@ -4,10 +4,13 @@ import './App.css';
 import PromPosal from './components/PromPosal';
 import Celebration from './components/Celebration';
 import Birthday from './components/Birthday';
+import Graduation from './components/Graduation';
 import hbdmessage from './audio/hbdmessage.m4a';
+import pomp from './audio/pomp.mp3';
 
 function App() {
-  const audioRef = useRef(null);
+  const birthdayAudioRef = useRef(null);
+  const pompAudioRef = useRef(null);
   const [currentPage, setCurrentPage] = useState('promposal');
   const [showConfetti, setShowConfetti] = useState(false);
   const [noPosition, setNoPosition] = useState({ top: '42%', left: '53%' });
@@ -24,10 +27,10 @@ function App() {
   };
 
   const handleBirthdayClick = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
+    setCurrentPage('graduation');
+    if (pompAudioRef.current) {
+      pompAudioRef.current.play();
     }
-    setCurrentPage('birthday');
     triggerConfetti();
   };
 
@@ -52,6 +55,8 @@ function App() {
         return <Celebration onBirthdayClick={handleBirthdayClick} />;
       case 'birthday':
         return <Birthday />;
+      case 'graduation':
+        return <Graduation />;
       default:
         return <PromPosal />;
     }
@@ -59,7 +64,8 @@ function App() {
 
   return (
     <div className={`app-container ${currentPage !== 'promposal' ? 'celebrate-bg' : ''}`}>
-      <audio ref={audioRef} src={hbdmessage} />
+      <audio ref={birthdayAudioRef} src={hbdmessage} />
+      <audio ref={pompAudioRef} src={pomp} />
       {showConfetti && <Confetti />}
       {renderCurrentPage()}
     </div>
