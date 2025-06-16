@@ -266,3 +266,58 @@
   margin: 1rem;
   border: 2px dashed rgba(255, 255, 255, 0.3);
 }
+
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.messages-header {
+  font-size: 3.5rem;
+  color: #ff69b4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.messages-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.message-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 200px;
+  font-family: 'Heyam', cursive;
+}
+
+.message-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-button.promposal {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.message-button.birthday {
+  background-color: #ffd700;
+  color: #333;
+}
+
+.message-button.graduation {
+  background-color: #4b0082;
+  color: white;
+}

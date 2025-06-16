@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import Confetti from 'react-confetti';
 import './App.css';
+import Messages from './components/Messages';
 import PromPosal from './components/PromPosal';
 import Celebration from './components/Celebration';
 import Birthday from './components/Birthday';
@@ -11,7 +12,7 @@ import pomp from './audio/pomp.mp3';
 function App() {
   const birthdayAudioRef = useRef(null);
   const pompAudioRef = useRef(null);
-  const [currentPage, setCurrentPage] = useState('promposal');
+  const [currentPage, setCurrentPage] = useState('messages');
   const [showConfetti, setShowConfetti] = useState(false);
   const [noPosition, setNoPosition] = useState({ top: '42%', left: '53%' });
 
@@ -21,12 +22,21 @@ function App() {
     setNoPosition({ top, left });
   };
 
+  const handlePromposalClick = () => {
+    setCurrentPage('promposal');
+  };
+
   const handleYesClick = () => {
     setCurrentPage('celebration');
     triggerConfetti();
   };
 
   const handleBirthdayClick = () => {
+    setCurrentPage('birthday');
+    triggerConfetti();
+  };
+
+  const handleGraduationClick = () => {
     setCurrentPage('graduation');
     if (pompAudioRef.current) {
       pompAudioRef.current.play();
@@ -43,6 +53,14 @@ function App() {
 
   const renderCurrentPage = () => {
     switch (currentPage) {
+      case 'messages':
+        return (
+          <Messages
+            onPromposalClick={handlePromposalClick}
+            onBirthdayClick={handleBirthdayClick}
+            onGraduationClick={handleGraduationClick}
+          />
+        );
       case 'promposal':
         return (
           <PromPosal
@@ -58,12 +76,12 @@ function App() {
       case 'graduation':
         return <Graduation />;
       default:
-        return <PromPosal />;
+        return <Messages />;
     }
   };
 
   return (
-    <div className={`app-container ${currentPage !== 'promposal' ? 'celebrate-bg' : ''}`}>
+    <div className={`app-container ${currentPage !== 'messages' ? 'celebrate-bg' : ''}`}>
       <audio ref={birthdayAudioRef} src={hbdmessage} />
       <audio ref={pompAudioRef} src={pomp} />
       {showConfetti && <Confetti />}
