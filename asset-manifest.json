@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/promposal/static/css/main.90cf78fb.css",
-    "main.js": "/promposal/static/js/main.d84d12ca.js",
+    "main.css": "/promposal/static/css/main.b6cff4b2.css",
+    "main.js": "/promposal/static/js/main.6a98f22d.js",
     "static/js/453.9d0d0eef.chunk.js": "/promposal/static/js/453.9d0d0eef.chunk.js",
+    "static/media/pomp.mp3": "/promposal/static/media/pomp.a1ab0b1daa37c68b62a1.mp3",
     "static/media/blueyhappy.gif": "/promposal/static/media/blueyhappy.7063f2ca8373c8f01a13.gif",
     "static/media/dog3.jpg": "/promposal/static/media/dog3.bfb96ad08839d3957be0.jpg",
     "static/media/dog2.jpg": "/promposal/static/media/dog2.8307b534cba3e4299f60.jpg",
     "static/media/dog1.jpg": "/promposal/static/media/dog1.93f2ec6ed12378f92d4a.jpg",
-    "static/media/dog4.jpg": "/promposal/static/media/dog4.db3b93d0495cd5291fdf.jpg",
     "static/media/naveen5.png": "/promposal/static/media/naveen5.eba451c5d3c762b16ba5.png",
     "static/media/naveen4.png": "/promposal/static/media/naveen4.66cc2185c69f6adee6df.png",
     "static/media/chili.png": "/promposal/static/media/chili.2aa6ded9e282b65fbea4.png",
@@ -21,12 +21,12 @@
     "static/media/bandit.png": "/promposal/static/media/bandit.8f32f493bf1fcdeaaf39.png",
     "static/media/naveen1.png": "/promposal/static/media/naveen1.7aed3191bd51ec52327f.png",
     "index.html": "/promposal/index.html",
-    "main.90cf78fb.css.map": "/promposal/static/css/main.90cf78fb.css.map",
-    "main.d84d12ca.js.map": "/promposal/static/js/main.d84d12ca.js.map",
+    "main.b6cff4b2.css.map": "/promposal/static/css/main.b6cff4b2.css.map",
+    "main.6a98f22d.js.map": "/promposal/static/js/main.6a98f22d.js.map",
     "453.9d0d0eef.chunk.js.map": "/promposal/static/js/453.9d0d0eef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90cf78fb.css",
-    "static/js/main.d84d12ca.js"
+    "static/css/main.b6cff4b2.css",
+    "static/js/main.6a98f22d.js"
   ]
 }
