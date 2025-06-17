@@ -7,6 +7,17 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   const [feedback, setFeedback] = useState({ quote: '', status: null }); // status can be 'correct' or 'incorrect'
   const [quoteOrder, setQuoteOrder] = useState([]); // To randomize quote position
 
+  const generateNewQuotePair = (realQuotesArr = realQuotes, fakeQuotesArr = fakeQuotes) => {
+    if (realQuotesArr.length === 0 || fakeQuotesArr.length === 0) return;
+
+    const realQuote = realQuotesArr[Math.floor(Math.random() * realQuotesArr.length)];
+    const fakeQuote = fakeQuotesArr[Math.floor(Math.random() * fakeQuotesArr.length)];
+    setCurrentPair({ real: realQuote, fake: fakeQuote });
+    
+    // Randomly determine quote order
+    setQuoteOrder(Math.random() < 0.5 ? ['real', 'fake'] : ['fake', 'real']);
+  };
+  
   useEffect(() => {
     const loadQuotes = async () => {
       try {
@@ -49,16 +60,7 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
     loadQuotes();
   }, []);
 
-  const generateNewQuotePair = (realQuotesArr = realQuotes, fakeQuotesArr = fakeQuotes) => {
-    if (realQuotesArr.length === 0 || fakeQuotesArr.length === 0) return;
-
-    const realQuote = realQuotesArr[Math.floor(Math.random() * realQuotesArr.length)];
-    const fakeQuote = fakeQuotesArr[Math.floor(Math.random() * fakeQuotesArr.length)];
-    setCurrentPair({ real: realQuote, fake: fakeQuote });
-    
-    // Randomly determine quote order
-    setQuoteOrder(Math.random() < 0.5 ? ['real', 'fake'] : ['fake', 'real']);
-  };
+  
 
   const handleQuoteClick = (isReal) => {
     if (feedback.status) return; // Prevent clicking during feedback
