@@ -245,26 +245,47 @@
   height: auto; 
 }
 
-.graduation-images {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
+.graduation-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.grad-img.placeholder {
-  width: 300px;
-  height: 300px;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  margin: 1rem;
-  border: 2px dashed rgba(255, 255, 255, 0.3);
+.graduation-image1 {
+  position: absolute; 
+  top: 25vh;
+  left: 10vw; 
+  width: 25vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.graduation-image2 {
+  position: absolute; 
+  top: 72.5vh;
+  left: 40vw; 
+  width: 50vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.graduation-image3 {
+  position: absolute; 
+  top: 20vh;
+  left: 44vw; 
+  width: 16vw;
+  height: auto;
+  object-fit: cover;
+}
+
+.graduation-image4 {
+  position: absolute; 
+  top: 19vh;
+  left: 65vw; 
+  width: 20vw;
+  height: auto;
+  object-fit: cover;
 }
 
 .messages-container {
@@ -387,4 +408,28 @@
   color: #000;
   text-shadow: none;
   transform: scale(1.02);
+}
+
+.graduation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2vh 0;
+}
+
+.graduation-header {
+  font-family: 'Heyam', cursive;
+  font-size: 8rem;
+  color: #4b2e83;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    -webkit-text-stroke: 0.5px black;
+
+  line-height: 1.2;
 }
