@@ -32,23 +32,29 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
           fakeResponse.text()
         ]);
 
-        // Parse CSV helper function
-        const parseCSV = (text) => {
+        // Parse quotes function - uses newlines as separators and removes trailing commas
+        const parseQuotes = (text) => {
           const lines = text.split('\n')
             .filter(line => line.trim().length > 0);
-          return lines.slice(1)
-            .map(line => {
-              const quote = line.split(',')[0].trim();
-              return quote.replace(/^["']|["']$/g, '');
-            })
-            .filter(quote => quote && quote.length > 0);
+          // Ensure there are no trailing commas or extra whitespace
+          return lines
+            .slice(1)  // Skip header
+            .map(line => line.trim().replace(/,+$/, '')); // Remove any trailing commas
         };
 
-        const parsedRealQuotes = parseCSV(realText);
-        const parsedFakeQuotes = parseCSV(fakeText);
+        const parsedRealQuotes = parseQuotes(realText);
+        const parsedFakeQuotes = parseQuotes(fakeText);
 
         setRealQuotes(parsedRealQuotes);
         setFakeQuotes(parsedFakeQuotes);
+
+        // Generate initial pair
+        if (parsedRealQuotes.length > 0 && parsedFakeQuotes.length > 0) {
+          const realQuote = parsedRealQuotes[Math.floor(Math.random() * parsedRealQuotes.length)];
+          const fakeQuote = parsedFakeQuotes[Math.floor(Math.random() * parsedFakeQuotes.length)];
+          setCurrentPair({ real: realQuote, fake: fakeQuote });
+          setQuoteOrder(Math.random() < 0.5 ? ['real', 'fake'] : ['fake', 'real']);
+        }
       } catch (error) {
         console.error('Error loading quotes:', error);
       }
