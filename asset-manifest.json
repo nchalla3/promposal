@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/promposal/static/css/main.603430bf.css",
-    "main.js": "/promposal/static/js/main.044732f2.js",
+    "main.css": "/promposal/static/css/main.fc5cb930.css",
+    "main.js": "/promposal/static/js/main.4396a242.js",
     "static/js/453.9d0d0eef.chunk.js": "/promposal/static/js/453.9d0d0eef.chunk.js",
     "static/media/pomp.mp3": "/promposal/static/media/pomp.a1ab0b1daa37c68b62a1.mp3",
     "static/media/blueyhappy.gif": "/promposal/static/media/blueyhappy.7063f2ca8373c8f01a13.gif",
     "static/media/dog3.jpg": "/promposal/static/media/dog3.bfb96ad08839d3957be0.jpg",
     "static/media/dog2.jpg": "/promposal/static/media/dog2.8307b534cba3e4299f60.jpg",
     "static/media/dog1.jpg": "/promposal/static/media/dog1.93f2ec6ed12378f92d4a.jpg",
+    "static/media/IMG_0733.jpg": "/promposal/static/media/IMG_0733.ab41385ab7a824b4ab20.jpg",
     "static/media/naveen5.png": "/promposal/static/media/naveen5.eba451c5d3c762b16ba5.png",
     "static/media/naveen4.png": "/promposal/static/media/naveen4.66cc2185c69f6adee6df.png",
     "static/media/chili.png": "/promposal/static/media/chili.2aa6ded9e282b65fbea4.png",
@@ -17,16 +18,19 @@
     "static/media/bingo.png": "/promposal/static/media/bingo.fa6fbb829974726cdc1d.png",
     "static/media/bluey.png": "/promposal/static/media/bluey.26e7d3e184153e377cee.png",
     "static/media/naveen6.png": "/promposal/static/media/naveen6.605a0bdeb3eb3d9b3dba.png",
+    "static/media/grad4.jpg": "/promposal/static/media/grad4.cc2aa2fafd57816f276f.jpg",
+    "static/media/grad3.jpg": "/promposal/static/media/grad3.8669795491bcd893c106.jpg",
     "static/media/naveen2.png": "/promposal/static/media/naveen2.4942590dbd0cb110f986.png",
     "static/media/bandit.png": "/promposal/static/media/bandit.8f32f493bf1fcdeaaf39.png",
     "static/media/naveen1.png": "/promposal/static/media/naveen1.7aed3191bd51ec52327f.png",
+    "static/media/uwlogo.jpg": "/promposal/static/media/uwlogo.e91dd1d9608c241e82fe.jpg",
     "index.html": "/promposal/index.html",
-    "main.603430bf.css.map": "/promposal/static/css/main.603430bf.css.map",
-    "main.044732f2.js.map": "/promposal/static/js/main.044732f2.js.map",
+    "main.fc5cb930.css.map": "/promposal/static/css/main.fc5cb930.css.map",
+    "main.4396a242.js.map": "/promposal/static/js/main.4396a242.js.map",
     "453.9d0d0eef.chunk.js.map": "/promposal/static/js/453.9d0d0eef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.603430bf.css",
-    "static/js/main.044732f2.js"
+    "static/css/main.fc5cb930.css",
+    "static/js/main.4396a242.js"
   ]
 }
