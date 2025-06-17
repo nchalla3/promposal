@@ -277,11 +277,14 @@
 }
 
 .messages-header {
-  font-size: 3.5rem;
+  font-size: 8rem;
   color: #ff69b4;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   text-align: center;
+  -webkit-text-stroke: 0.1px black;
+  position: relative;
+  top: 2vh;
 }
 
 .messages-buttons {
@@ -289,11 +292,13 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
+  -webkit-text-stroke: 0.1px black;
+
 }
 
 .message-button {
   padding: 15px 30px;
-  font-size: 1.5rem;
+  font-size: 3rem;
   border: none;
   border-radius: 25px;
   cursor: pointer;
