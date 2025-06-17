@@ -56,11 +56,14 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
 
     loadQuotes();
   }, []);
-
   // Generate initial pair when quotes are loaded
   useEffect(() => {
     if (realQuotes.length > 0 && fakeQuotes.length > 0) {
-      generateNewQuotePair();
+      // Generate initial pair directly without using generateNewQuotePair
+      const realQuote = realQuotes[Math.floor(Math.random() * realQuotes.length)];
+      const fakeQuote = fakeQuotes[Math.floor(Math.random() * fakeQuotes.length)];
+      setCurrentPair({ real: realQuote, fake: fakeQuote });
+      setQuoteOrder(Math.random() < 0.5 ? ['real', 'fake'] : ['fake', 'real']);
     }
   }, [realQuotes, fakeQuotes]);
 
