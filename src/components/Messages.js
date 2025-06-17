@@ -7,17 +7,17 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   const [feedback, setFeedback] = useState({ quote: '', status: null }); // status can be 'correct' or 'incorrect'
   const [quoteOrder, setQuoteOrder] = useState([]); // To randomize quote position
 
-  const generateNewQuotePair = (realQuotesArr = realQuotes, fakeQuotesArr = fakeQuotes) => {
-    if (realQuotesArr.length === 0 || fakeQuotesArr.length === 0) return;
+  const generateNewQuotePair = () => {
+    if (realQuotes.length === 0 || fakeQuotes.length === 0) return;
 
-    const realQuote = realQuotesArr[Math.floor(Math.random() * realQuotesArr.length)];
-    const fakeQuote = fakeQuotesArr[Math.floor(Math.random() * fakeQuotesArr.length)];
+    const realQuote = realQuotes[Math.floor(Math.random() * realQuotes.length)];
+    const fakeQuote = fakeQuotes[Math.floor(Math.random() * fakeQuotes.length)];
     setCurrentPair({ real: realQuote, fake: fakeQuote });
     
     // Randomly determine quote order
     setQuoteOrder(Math.random() < 0.5 ? ['real', 'fake'] : ['fake', 'real']);
   };
-  
+
   useEffect(() => {
     const loadQuotes = async () => {
       try {
@@ -49,9 +49,6 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
 
         setRealQuotes(parsedRealQuotes);
         setFakeQuotes(parsedFakeQuotes);
-
-        // Generate initial pair
-        generateNewQuotePair(parsedRealQuotes, parsedFakeQuotes);
       } catch (error) {
         console.error('Error loading quotes:', error);
       }
@@ -60,7 +57,12 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
     loadQuotes();
   }, []);
 
-  
+  // Generate initial pair when quotes are loaded
+  useEffect(() => {
+    if (realQuotes.length > 0 && fakeQuotes.length > 0) {
+      generateNewQuotePair();
+    }
+  }, [realQuotes, fakeQuotes]);
 
   const handleQuoteClick = (isReal) => {
     if (feedback.status) return; // Prevent clicking during feedback
@@ -78,6 +80,7 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
       generateNewQuotePair();
     }, 2000);
   };
+
   const renderQuoteButton = (quote, isReal) => {
     const isClicked = feedback.quote === quote;
     const buttonClass = `quote-button ${
@@ -97,7 +100,8 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
 
   return (
     <div className="messages-container">
-      <h1 className="messages-header">Messages to Ella</h1>      <div className="quote-game-container">
+      <h1 className="messages-header">Messages to Ella</h1>
+      <div className="quote-game-container">
         <h2 className="quote-game-title">Which quote is real?</h2>
         <div className="quote-buttons-container">
           {quoteOrder.map((type) => (
