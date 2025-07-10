@@ -6,9 +6,17 @@
 
 
 .app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 1vh 2vw 0 2vw; /* Minimal top padding */
   text-align: center;
   position: relative;
-  height: 100vh;
+  /* height: 100vh; removed to prevent pushing content down */
   background-color: #a4a4ff;
   overflow: hidden;
   font-family: 'Heyam', cursive;
@@ -24,7 +32,7 @@
 
   /* letter styling*/
   letter-spacing: 3px;
-  font-size: 5.5vw;
+  font-size: 4.7vw;
   -webkit-text-stroke: 0.5px black;
   color: #88cafc;
 
@@ -86,31 +94,33 @@
 
 .yes-button,
 .no-button {
-  padding: 1vw 2vw;
-  font-size: 2vw;
+  padding: 1.7vw 3.4vw;
+  font-size: 2.1vw;
   border: none;
-  border-radius: 15px;
+  border-radius: 1.7vw;
   cursor: pointer;
   margin: 1%;
   transition: all 0.2s ease-in-out;
   position: absolute;
   border: 0.2vw solid #333;
-
-
+  min-width: 85px;
+  min-height: 34px;
+  top: 44%;
 }
 
 .yes-button {
-  background-color: #00c853;
-  position: absolute;
-  color: white;
-  top: 42%; 
-  left: 37.5%; 
+  left: 37%; /* default .no-button left from your React state */
   transform: translateX(-50%);
+  background-color: #00c853;
+  color: white;
+  margin: 0;
+  display: block;
 }
 
 .no-button {
   background-color: #d50000;
   color: white;
+  position: absolute;
 }
 
 .celebration {
@@ -254,7 +264,7 @@
 
 .graduation-image1 {
   position: absolute; 
-  top: 25vh;
+  top: 20vh; /* shifted up to match grad3 */
   left: 10vw; 
   width: 25vw;
   height: auto;
@@ -298,29 +308,31 @@
 }
 
 .messages-header {
-  font-size: 10rem;
+  font-size: 8.5rem;
   color: #ff69b4;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
+  margin-top: 0;
+  padding-top: 0;
   text-align: center;
   -webkit-text-stroke: 0.1px black;
   position: relative;
-  top: 0;
-  padding-top: 2vh;
+  top: 0vh;
 }
 
 .messages-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 15px;
   align-items: center;
   -webkit-text-stroke: 0.1px black;
-  margin-top: 2vh;
+  margin-top: 0vh;
+  justify-content: center;
 }
 
 .message-button {
-  padding: 15px 30px;
-  font-size: 3rem;
+  padding: 12px 25px;
+  font-size: 2.55rem;
   border: none;
   border-radius: 25px;
   cursor: pointer;
@@ -360,10 +372,11 @@
 
 .quote-game-title {
   color: #404066;
-  font-size: 4rem;
+  font-size: 3.4rem;
   font-family: 'Heyam', cursive;
   margin: 0;
   padding: 0;
+  margin-top: 6vh;
 }
 
 .quote-buttons-container {
@@ -372,22 +385,33 @@
   justify-content: center;
   gap: 1rem;
   padding: 0;
+  margin-top: 2vh;
 }
 
 .quote-button {
-  padding: 1.5rem;
+  padding: 1.3rem;
   margin: 0.5rem;
-  font-size: 1.8rem;
+  font-size: 1.53rem;
   border-radius: 15px;
   border: none;
   background: #7752c0;
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
-  min-width: 300px;
+  min-width: 255px;
+  max-width: 350px;
+  min-height: 3.5em;
+  max-height: 4.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
   font-family: 'Heyam', cursive;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
   text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  overflow: hidden;
 }
 
 .quote-button:hover {
@@ -421,7 +445,7 @@
 
 .graduation-header {
   font-family: 'Heyam', cursive;
-  font-size: 8rem;
+  font-size: 6.8rem;
   color: #4b2e83;
   text-align: center;
   width: 100%;
@@ -432,4 +456,36 @@
     -webkit-text-stroke: 0.5px black;
 
   line-height: 1.2;
+}
+
+/* Responsive adjustments for buttons */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 2vw 1vw 0 1vw; /* Minimal top padding for mobile */
+  }
+  .yes-button,
+  .no-button {
+    font-size: 4vw;
+    padding: 3vw 6vw;
+  }
+}
+
+/* Responsive image sizing */
+img, .bluey, .bandit, .bingo, .chili, .naveen1, .naveen2, .naveen3, .naveen4, .naveen5, .naveen6 {
+  max-width: 90vw;
+  height: auto;
+}
+
+/* Responsive text */
+.speech, .celebration h1, .hbday-heading, .graduation-header {
+  font-size: clamp(1.7rem, 5.1vw, 6.8vw);
+  max-width: 95vw;
+  word-break: break-word;
+}
+
+/* Ensure all flex containers are responsive */
+.messages-container, .graduation-container, .quote-game-container {
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
