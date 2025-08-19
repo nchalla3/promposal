@@ -18,11 +18,6 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
     'ellasunnies.png'
   ];
 
-  const getRandomImages = () => {
-    const shuffled = [...ellaImages].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, 3);
-  };
-
   const generateNewQuotePair = () => {
     if (realQuotes.length === 0 || fakeQuotes.length === 0) return;
 
@@ -36,6 +31,10 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
 
   useEffect(() => {
     // Set random images when component mounts
+    const getRandomImages = () => {
+      const shuffled = [...ellaImages].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, 3);
+    };
     setRandomImages(getRandomImages());
     
     const loadQuotes = async () => {
