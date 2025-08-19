@@ -323,7 +323,7 @@
 .random-images-container {
   display: flex;
   justify-content: center;
-  gap: 5px;
+  gap: 6vw;
   margin: 5px 0;
 }
 
