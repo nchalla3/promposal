@@ -1,14 +1,26 @@
 {
   "files": {
-    "main.css": "/promposal/static/css/main.3f0c3ca9.css",
-    "main.js": "/promposal/static/js/main.da042920.js",
+    "main.css": "/promposal/static/css/main.764be23a.css",
+    "main.js": "/promposal/static/js/main.ac811e94.js",
     "static/js/453.9d0d0eef.chunk.js": "/promposal/static/js/453.9d0d0eef.chunk.js",
     "static/media/pomp.mp3": "/promposal/static/media/pomp.a1ab0b1daa37c68b62a1.mp3",
+    "static/media/ellagobi.png": "/promposal/static/media/ellagobi.fc7d07c08b7ccd9329e5.png",
     "static/media/blueyhappy.gif": "/promposal/static/media/blueyhappy.7063f2ca8373c8f01a13.gif",
+    "static/media/IMG_6752.jpg": "/promposal/static/media/IMG_6752.d3af9b581b37717417e3.jpg",
     "static/media/dog3.jpg": "/promposal/static/media/dog3.bfb96ad08839d3957be0.jpg",
     "static/media/dog2.jpg": "/promposal/static/media/dog2.8307b534cba3e4299f60.jpg",
     "static/media/dog1.jpg": "/promposal/static/media/dog1.93f2ec6ed12378f92d4a.jpg",
     "static/media/IMG_0733.jpg": "/promposal/static/media/IMG_0733.ab41385ab7a824b4ab20.jpg",
+    "static/media/dog4.jpg": "/promposal/static/media/dog4.db3b93d0495cd5291fdf.jpg",
+    "static/media/elladog2.png": "/promposal/static/media/elladog2.c9181257a5fa9ad9b408.png",
+    "static/media/elladog1.png": "/promposal/static/media/elladog1.bcebef7fb9d9074166a2.png",
+    "static/media/elladog3.png": "/promposal/static/media/elladog3.54fb3b6f6d603f5bffd3.png",
+    "static/media/ellapizza.png": "/promposal/static/media/ellapizza.ea174d0678327e43b293.png",
+    "static/media/ellaprom.png": "/promposal/static/media/ellaprom.235f3c1c0c92aa9eaacd.png",
+    "static/media/ellasunnies.png": "/promposal/static/media/ellasunnies.8c8f749eadf6c47c107b.png",
+    "static/media/IMG_6439.jpg": "/promposal/static/media/IMG_6439.b8bf250f3aa37193cbd6.jpg",
+    "static/media/IMG_0548.jpg": "/promposal/static/media/IMG_0548.5de193afbf40a23c2e89.jpg",
+    "static/media/IMG_5978.jpg": "/promposal/static/media/IMG_5978.057c7414c217b3d40ac3.jpg",
     "static/media/naveen5.png": "/promposal/static/media/naveen5.eba451c5d3c762b16ba5.png",
     "static/media/naveen4.png": "/promposal/static/media/naveen4.66cc2185c69f6adee6df.png",
     "static/media/chili.png": "/promposal/static/media/chili.2aa6ded9e282b65fbea4.png",
@@ -25,12 +37,12 @@
     "static/media/naveen1.png": "/promposal/static/media/naveen1.7aed3191bd51ec52327f.png",
     "static/media/uwlogo.jpg": "/promposal/static/media/uwlogo.e91dd1d9608c241e82fe.jpg",
     "index.html": "/promposal/index.html",
-    "main.3f0c3ca9.css.map": "/promposal/static/css/main.3f0c3ca9.css.map",
-    "main.da042920.js.map": "/promposal/static/js/main.da042920.js.map",
+    "main.764be23a.css.map": "/promposal/static/css/main.764be23a.css.map",
+    "main.ac811e94.js.map": "/promposal/static/js/main.ac811e94.js.map",
     "453.9d0d0eef.chunk.js.map": "/promposal/static/js/453.9d0d0eef.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3f0c3ca9.css",
-    "static/js/main.da042920.js"
+    "static/css/main.764be23a.css",
+    "static/js/main.ac811e94.js"
   ]
 }
