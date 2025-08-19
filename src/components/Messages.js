@@ -79,7 +79,7 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
     };
 
     loadQuotes();
-  }, []);
+  }, [ellaImages]);
   // Generate initial pair when quotes are loaded
   useEffect(() => {
     if (realQuotes.length > 0 && fakeQuotes.length > 0) {
