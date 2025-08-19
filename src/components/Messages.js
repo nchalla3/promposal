@@ -8,16 +8,6 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   const [quoteOrder, setQuoteOrder] = useState([]); // To randomize quote position
   const [randomImages, setRandomImages] = useState([]);
 
-  const ellaImages = [
-    'elladog1.png',
-    'elladog2.png', 
-    'elladog3.png',
-    'ellagobi.png',
-    'ellapizza.png',
-    'ellaprom.png',
-    'ellasunnies.png'
-  ];
-
   const generateNewQuotePair = () => {
     if (realQuotes.length === 0 || fakeQuotes.length === 0) return;
 
@@ -31,6 +21,16 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
 
   useEffect(() => {
     // Set random images when component mounts
+    const ellaImages = [
+      'elladog1.png',
+      'elladog2.png', 
+      'elladog3.png',
+      'ellagobi.png',
+      'ellapizza.png',
+      'ellaprom.png',
+      'ellasunnies.png'
+    ];
+    
     const getRandomImages = () => {
       const shuffled = [...ellaImages].sort(() => 0.5 - Math.random());
       return shuffled.slice(0, 3);
@@ -79,7 +79,7 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
     };
 
     loadQuotes();
-  }, [ellaImages]);
+  }, []);
   // Generate initial pair when quotes are loaded
   useEffect(() => {
     if (realQuotes.length > 0 && fakeQuotes.length > 0) {
