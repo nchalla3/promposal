@@ -6,6 +6,22 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   const [currentPair, setCurrentPair] = useState({ real: '', fake: '' });
   const [feedback, setFeedback] = useState({ quote: '', status: null }); // status can be 'correct' or 'incorrect'
   const [quoteOrder, setQuoteOrder] = useState([]); // To randomize quote position
+  const [randomImages, setRandomImages] = useState([]);
+
+  const ellaImages = [
+    'elladog1.png',
+    'elladog2.png', 
+    'elladog3.png',
+    'ellagobi.png',
+    'ellapizza.png',
+    'ellaprom.png',
+    'ellasunnies.png'
+  ];
+
+  const getRandomImages = () => {
+    const shuffled = [...ellaImages].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, 3);
+  };
 
   const generateNewQuotePair = () => {
     if (realQuotes.length === 0 || fakeQuotes.length === 0) return;
@@ -19,6 +35,9 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   };
 
   useEffect(() => {
+    // Set random images when component mounts
+    setRandomImages(getRandomImages());
+    
     const loadQuotes = async () => {
       try {
         // Load both real and fake quotes
@@ -110,6 +129,16 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   return (
     <div className="messages-container">
       <h1 className="messages-header">Messages to Ella</h1>
+      <div className="random-images-container">
+        {randomImages.map((imageName, index) => (
+          <img
+            key={index}
+            src={require(`../images/${imageName}`)}
+            alt={`Ella ${index + 1}`}
+            className="random-ella-image"
+          />
+        ))}
+      </div>
       <div className="quote-game-container">
         <h2 className="quote-game-title">Which quote is real?</h2>
         <div className="quote-buttons-container">
