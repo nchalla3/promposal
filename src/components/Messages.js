@@ -6,6 +6,7 @@ import ellagobi from '../images/randomella/ellagobi.png';
 import ellapizza from '../images/randomella/ellapizza.png';
 import ellaprom from '../images/randomella/ellaprom.png';
 import ellasunnies from '../images/randomella/ellasunnies.png';
+import ellaicecream from '../images/randomella/ellaicecream.jpeg';
 
 const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   const [realQuotes, setRealQuotes] = useState([]);
@@ -33,7 +34,8 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
       ellagobi,
       ellapizza,
       ellaprom,
-      ellasunnies
+      ellasunnies,
+      ellaicecream
     ];
     
     const getRandomImages = () => {
