@@ -1,7 +1,7 @@
 import React from 'react';
-import dog1 from '../images/dog1.jpg';
-import dog2 from '../images/dog2.jpg';
-import dog3 from '../images/dog3.jpg';
+import dog1 from '../images/birthday/dog1.jpg';
+import dog2 from '../images/birthday/dog2.jpg';
+import dog3 from '../images/birthday/dog3.jpg';
 
 const Birthday = () => {
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
-import blueyhappy from '../images/blueyhappy.gif';
-import naveen2 from '../images/naveen2.png';
-import naveen3 from '../images/naveen3.png';
-import naveen4 from '../images/naveen4.png';
-import naveen5 from '../images/naveen5.png';
-import naveen6 from '../images/naveen6.png';
+import blueyhappy from '../images/promposal/blueyhappy.gif';
+import naveen2 from '../images/promposal/naveen2.png';
+import naveen3 from '../images/promposal/naveen3.png';
+import naveen4 from '../images/promposal/naveen4.png';
+import naveen5 from '../images/promposal/naveen5.png';
+import naveen6 from '../images/promposal/naveen6.png';
 
 const Celebration = ({ onBirthdayClick }) => {
   return (

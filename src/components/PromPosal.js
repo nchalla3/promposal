@@ -1,9 +1,9 @@
 import React from 'react';
-import bluey from '../images/bluey.png';
-import bandit from '../images/bandit.png';
-import chili from '../images/chili.png';
-import bingo from '../images/bingo.png';
-import naveen1 from '../images/naveen1.png';
+import bluey from '../images/promposal/bluey.png';
+import bandit from '../images/promposal/bandit.png';
+import chili from '../images/promposal/chili.png';
+import bingo from '../images/promposal/bingo.png';
+import naveen1 from '../images/promposal/naveen1.png';
 
 const PromPosal = ({ onYesClick, noPosition, onNoClick }) => {
   return (

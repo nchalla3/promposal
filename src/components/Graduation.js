@@ -1,8 +1,8 @@
 import React from 'react';
-import grad1 from '../images/IMG_0733.jpg';
-import grad2 from '../images/uwlogo.jpg';
-import grad3 from '../images/grad3.jpg';
-import grad4 from '../images/grad4.jpg';
+import grad1 from '../images/graduation/kalandellagrad.jpg';
+import grad2 from '../images/graduation/uwlogo.jpg';
+import grad3 from '../images/graduation/grad3.jpg';
+import grad4 from '../images/graduation/grad4.jpg';
 
 const Graduation = () => {
   return (    <div className="graduation-container">

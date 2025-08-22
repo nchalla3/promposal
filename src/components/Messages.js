@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
+// Import random Ella images
+import elladog2 from '../images/randomella/elladog2.png';
+import ellagobi from '../images/randomella/ellagobi.png';
+import ellapizza from '../images/randomella/ellapizza.png';
+import ellaprom from '../images/randomella/ellaprom.png';
+import ellasunnies from '../images/randomella/ellasunnies.png';
+
 const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   const [realQuotes, setRealQuotes] = useState([]);
   const [fakeQuotes, setFakeQuotes] = useState([]);
@@ -22,13 +29,11 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   useEffect(() => {
     // Set random images when component mounts
     const ellaImages = [
-      'elladog1.png',
-      'elladog2.png', 
-      'elladog3.png',
-      'ellagobi.png',
-      'ellapizza.png',
-      'ellaprom.png',
-      'ellasunnies.png'
+      elladog2, 
+      ellagobi,
+      ellapizza,
+      ellaprom,
+      ellasunnies
     ];
     
     const getRandomImages = () => {
@@ -129,10 +134,10 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
     <div className="messages-container">
       <h1 className="messages-header">Messages to Ella</h1>
       <div className="random-images-container">
-        {randomImages.map((imageName, index) => (
+        {randomImages.map((imageSource, index) => (
           <img
             key={index}
-            src={require(`../images/${imageName}`)}
+            src={imageSource}
             alt={`Ella ${index + 1}`}
             className="random-ella-image"
           />
