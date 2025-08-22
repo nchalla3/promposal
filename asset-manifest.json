@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/promposal/static/css/main.764be23a.css",
-    "main.js": "/promposal/static/js/main.6609399e.js",
+    "main.js": "/promposal/static/js/main.35773223.js",
     "static/js/453.9d0d0eef.chunk.js": "/promposal/static/js/453.9d0d0eef.chunk.js",
     "static/media/pomp.mp3": "/promposal/static/media/pomp.a1ab0b1daa37c68b62a1.mp3",
     "static/media/ellagobi.png": "/promposal/static/media/ellagobi.fc7d07c08b7ccd9329e5.png",
@@ -10,11 +10,12 @@
     "static/media/dog2.jpg": "/promposal/static/media/dog2.8307b534cba3e4299f60.jpg",
     "static/media/dog1.jpg": "/promposal/static/media/dog1.93f2ec6ed12378f92d4a.jpg",
     "static/media/kalandellagrad.jpg": "/promposal/static/media/kalandellagrad.ab41385ab7a824b4ab20.jpg",
-    "static/media/elladog2.png": "/promposal/static/media/elladog2.c9181257a5fa9ad9b408.png",
+    "static/media/ellapuppy.png": "/promposal/static/media/ellapuppy.c9181257a5fa9ad9b408.png",
     "static/media/ellapizza.png": "/promposal/static/media/ellapizza.ea174d0678327e43b293.png",
     "static/media/ellaprom.png": "/promposal/static/media/ellaprom.235f3c1c0c92aa9eaacd.png",
     "static/media/ellasunnies.png": "/promposal/static/media/ellasunnies.8c8f749eadf6c47c107b.png",
     "static/media/naveen5.png": "/promposal/static/media/naveen5.eba451c5d3c762b16ba5.png",
+    "static/media/ellaicecream.jpeg": "/promposal/static/media/ellaicecream.0cb85d124c20261fb310.jpeg",
     "static/media/naveen4.png": "/promposal/static/media/naveen4.66cc2185c69f6adee6df.png",
     "static/media/chili.png": "/promposal/static/media/chili.2aa6ded9e282b65fbea4.png",
     "static/media/Heyam.ttf": "/promposal/static/media/Heyam.4ae2324d0a100a9c91fc.ttf",
@@ -31,11 +32,11 @@
     "static/media/uwlogo.jpg": "/promposal/static/media/uwlogo.e91dd1d9608c241e82fe.jpg",
     "index.html": "/promposal/index.html",
     "main.764be23a.css.map": "/promposal/static/css/main.764be23a.css.map",
-    "main.6609399e.js.map": "/promposal/static/js/main.6609399e.js.map",
+    "main.35773223.js.map": "/promposal/static/js/main.35773223.js.map",
     "453.9d0d0eef.chunk.js.map": "/promposal/static/js/453.9d0d0eef.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.764be23a.css",
-    "static/js/main.6609399e.js"
+    "static/js/main.35773223.js"
   ]
 }
