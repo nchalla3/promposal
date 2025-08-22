@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Import random Ella images
-import elladog2 from '../images/randomella/elladog2.png';
+import ellapuppy from '../images/randomella/ellapuppy.png';
 import ellagobi from '../images/randomella/ellagobi.png';
 import ellapizza from '../images/randomella/ellapizza.png';
 import ellaprom from '../images/randomella/ellaprom.png';
@@ -29,7 +29,7 @@ const Messages = ({ onPromposalClick, onBirthdayClick, onGraduationClick }) => {
   useEffect(() => {
     // Set random images when component mounts
     const ellaImages = [
-      elladog2, 
+      ellapuppy, 
       ellagobi,
       ellapizza,
       ellaprom,
